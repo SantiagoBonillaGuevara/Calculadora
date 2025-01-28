@@ -65,10 +65,10 @@
                 android:layout_column="0"
                 android:text="CA"/>
             <Button
-                android:id="@+id/btnNegar"
+                android:id="@+id/btnPotencia"
                 style="@style/botonesGrises"
                 android:layout_column="1"
-                android:text="+/-"/>
+                android:text="^"/>
             <Button
                 android:id="@+id/btnPorcentaje"
                 style="@style/botonesGrises"

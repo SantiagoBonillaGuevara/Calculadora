@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculator.databinding.ActivityMainBinding
+import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnPor.setOnClickListener { escribirOperador("x") }
         binding.btnDivision.setOnClickListener { escribirOperador("/") }
         binding.btnMenos.setOnClickListener { escribirOperador("-") }
+        binding.btnPorcentaje.setOnClickListener { escribirOperador("%") }
+        binding.btnPotencia.setOnClickListener { escribirOperador("^") }
         binding.btnIgual.setOnClickListener { resultado() }
         binding.btnPunto.setOnClickListener { punto() }
     }
@@ -122,6 +125,12 @@ class MainActivity : AppCompatActivity() {
 
                 "x" -> {
                     resultado = numero1 * numero2
+                }
+                "%" -> {
+                    resultado = numero1 % numero2
+                }
+                "^" -> {
+                    resultado = numero1.pow(numero2)
                 }
 
                 else -> {
