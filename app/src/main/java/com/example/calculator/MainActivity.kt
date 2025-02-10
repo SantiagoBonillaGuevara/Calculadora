@@ -54,7 +54,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun escribirOperador(operador: String) {
-        if (operator.isNullOrEmpty() && !nCurrent.equals("0")) {
+        if (operator.isNullOrEmpty() ) {
+
             operator = operador
             binding.tvNumber.setText(binding.tvNumber.getText().toString() + operator)
         } else if (!operator.isNullOrEmpty() && !operador.equals("-") && !operador.equals("%") && n2.isNullOrEmpty()) {

@@ -14,6 +14,7 @@
     </style>
 
     android:textSize="30sp"
+
     <style name="botonesGrises">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">80dp</item>
@@ -26,6 +27,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">30sp</item>
     </style>
+
     <style name="botonesGrisesOscuros">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">80dp</item>
@@ -37,6 +39,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">30sp</item>
     </style>
+
     <style name="botonesNaranjas">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">80dp</item>
@@ -48,5 +51,14 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="imageGrid">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:padding">4dp</item>
     </style>
 </resources>
