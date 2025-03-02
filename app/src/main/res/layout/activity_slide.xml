@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:padding="10dp">
 
-    <LinearLayout
-        android:id="@+id/LinearLayoutImages"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:id="@+id/hsv1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp">
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutImages1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/hsv2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toTopOf="@id/hsv3"
+        app:layout_constraintTop_toBottomOf="@id/hsv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutImages2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/hsv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutImages3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="20dp" />
+
+    </HorizontalScrollView>
 
 
-    </LinearLayout>
-</HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

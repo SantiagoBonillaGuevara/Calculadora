@@ -16,44 +16,49 @@ class Slide : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySlideBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initComponents()
+        initUI()
     }
 
-    private fun initComponents() {
+    private fun initUI() {
         loadImagesInScrollView()
     }
 
-    private fun getImages(): List<String> {
-        return listOf(
-            "https://cdn.mos.cms.futurecdn.net/7SfznToW65UX8QdS65Jn5d-1024-80.jpg",
-            "https://http2.mlstatic.com/poster-originales-de-peliculas-de-cine-D_NQ_NP_100325-MLM25403772463_022017-F.jpg",
-            "https://th.bing.com/th/id/R.024a9053ac2247fe747fe41dfa3600ef?rik=4DBhJWhbg37edQ&pid=ImgRaw&r=0",
-            "https://th.bing.com/th/id/OIP.QkO72gzfHBErlRFsVc_-sgHaLH?rs=1&pid=ImgDetMain",
-            "https://th.bing.com/th/id/OIP.B8Oz2FQKVsrcDB3ltvbB7gHaLH?rs=1&pid=ImgDetMain"
-        )
+    private fun loadImagesInScrollView() {
+        val imagesUrls: List<String> = ImageCollection.defaultImages
+        for (index in imagesUrls.indices) {
+            val imageUrl = imagesUrls[index]
+
+            when (index) {
+                0 -> binding.LinearLayoutImages1.addView(createImageView(imageUrl))
+                in 1..4 -> {
+                    binding.LinearLayoutImages1.addView(createImageView(imageUrl))
+                    binding.LinearLayoutImages2.addView(createImageView(imageUrl))
+                }
+
+                in 5..8 -> binding.LinearLayoutImages2.addView(createImageView(imageUrl))
+                in 9..14 -> binding.LinearLayoutImages3.addView(createImageView(imageUrl))
+            }
+        }
     }
 
-    private fun loadImagesInScrollView() {
-        val imagesUrls:List<String> = getImages()
-        for (imageUrl in imagesUrls) {
-            val imageView = ImageView(this)
-            val params = LinearLayout.LayoutParams( // set image layout properties
-                400,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
+    fun createImageView(imageUrl: String): ImageView {
+        val imageView = ImageView(this)
+        val params = LinearLayout.LayoutParams( // set image layout properties
+            400,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
 
-            imageView.apply { // set image properties
-                layoutParams = params
-                adjustViewBounds = true
-                scaleType = ImageView.ScaleType.CENTER_CROP
-            }
-
-            Glide.with(this)
-                .load(imageUrl)
-                .override(400, 300) // set exact size
-                .into(imageView)
-
-            binding.LinearLayoutImages.addView(imageView)
+        imageView.apply { // set image properties
+            layoutParams = params
+            adjustViewBounds = true
+            scaleType = ImageView.ScaleType.CENTER_CROP
         }
+
+        Glide.with(this)
+            .load(imageUrl)
+            .override(400, 300) // set exact size
+            .into(imageView)
+
+        return imageView
     }
 }
