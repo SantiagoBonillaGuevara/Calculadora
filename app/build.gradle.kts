@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.calculator"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -41,7 +41,10 @@ android {
 }
 
 dependencies {
+    //libreria de google maps
+    implementation("com.google.android.gms:play-services-maps:19.1.0")
 
+    //librerias de firebase
     implementation("androidx.databinding:viewbinding:8.7.3")
     implementation("com.google.firebase:firebase-auth:21.0.1")
     implementation("com.google.firebase:firebase-database:20.0.0")
@@ -55,6 +58,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.car.ui.lib)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

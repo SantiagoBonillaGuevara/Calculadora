@@ -8,7 +8,7 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="true"/>
+        android:required="true" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -23,6 +23,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Slide"
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false" />
@@ -33,7 +41,7 @@
             android:name=".Sign"
             android:exported="false" />
         <activity
-            android:name=".Slide"
+            android:name=".Gps"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

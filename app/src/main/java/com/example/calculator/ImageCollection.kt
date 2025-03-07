@@ -4,7 +4,7 @@ data class ImageCollection(val images: List<String>) {
 
     companion object {
         val defaultImages: List<String> = listOf(
-            "https://cdn.mos.cms.futurecdn.net/7SfznToW65UX8QdS65Jn5d-1024-80.jpg",
+            "https://instagram.fbog17-2.fna.fbcdn.net/v/t51.2885-15/481385403_17869706163301260_2491723020658727658_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xMjg0eDE2MDQuc2RyLmY3NTc2MS5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fbog17-2.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2AE3sxi0xIwOe94jYHtEwFd1xWWHDMBORT029ZFbseGEWs6YAg2b5AzQs_IAsZou2EE&_nc_ohc=xjGrog9J040Q7kNvgGtCQlV&_nc_gid=859aea462f464dfcaafbeaba98778cef&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzU3NTA3NTQyNDIzMDc4NTgyMw%3D%3D.3-ccb7-5&oh=00_AYCjYTUZw5ELplu2hCw5UDRxMePteJej4kqf2aa1k-uvEg&oe=67CBF74B&_nc_sid=7a9f4b",
             "https://http2.mlstatic.com/poster-originales-de-peliculas-de-cine-D_NQ_NP_100325-MLM25403772463_022017-F.jpg",
             "https://th.bing.com/th/id/R.024a9053ac2247fe747fe41dfa3600ef?rik=4DBhJWhbg37edQ&pid=ImgRaw&r=0",
             "https://th.bing.com/th/id/OIP.QkO72gzfHBErlRFsVc_-sgHaLH?rs=1&pid=ImgDetMain",
